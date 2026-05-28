@@ -1,0 +1,96 @@
+html, body{
+    margin: 0;
+    padding: 0;background: 
+    linear-gradient(to bottom, #012214,  #049635);
+    background-attachment: fixed;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header{
+    position: relative;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25dvh;
+    margin:auto;
+    padding:auto;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}nav{
+    display: flex;
+    gap: 2%;
+    padding: 1%;
+}
+.main-seila{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    width:100%;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    flex: 1;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    
+}.dropdown-conteudo{
+   position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    padding: 12px;
+    min-width: 200px;
+    background-color: white;
+    z-index: 1;
+
+}.dropdown-conteudo.show{
+    display: block !important;
+}.dropdown-conteudo a{
+    color: black;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+footer{
+    color: white;
+    position: flex;
+    margin-left: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.botao-menu{
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}.botao-menu:hover{
+    cursor: pointer;
+}
+#btncadastrar{
+    width: 20%;
+    height: 10dvh;
+    margin: 5%;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    border: 4px solid white;
+    font-size: 24px;
+    font-weight: bold;
+}#btncadastrar:hover{
+        cursor: pointer;
+        border: 4px solid rgb(62, 143, 92);
+}
