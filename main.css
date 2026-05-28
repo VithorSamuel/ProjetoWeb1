@@ -1,13 +1,12 @@
-html, body{
-    margin: 0;
-    padding: 0;background: 
-    linear-gradient(to bottom, #012214,  #049635);
-    background-attachment: fixed;
-}
+
 .container{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;background: 
+    linear-gradient(to bottom, #012214,  #049635);
+    background-attachment: fixed;
 }
 header{
     position: relative;
@@ -36,6 +35,7 @@ header{
     justify-content: center;
     text-align: center;
     font-size: 18px;
+    margin-top: 40px;
     width:100%;
     color: white;
     font-family:'Times New Roman', Times, serif;
@@ -51,7 +51,9 @@ header{
     top: 100%;
     left: 0;
     padding: 12px;
-    min-width: 200px;
+    min-width: 300px;
+    min-height: 50px;
+    border-radius: 20px;
     background-color: white;
     z-index: 1;
 
@@ -62,6 +64,15 @@ header{
     display: block;
     text-align: left;
     width: 100%;
+    margin: 20px;
+}.dropdown-conteudo a:hover{
+    cursor: pointer;
+    color: #049635;
+    span{
+    color: #049635;
+    }
+}.dropdown-conteudo span{
+    color: gray;
 }
 footer{
     color: white;
