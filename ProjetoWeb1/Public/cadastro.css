@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+main{
+position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #012214,  #049635);
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}
+
+aside{
+position:relative;
+display:block;
+text-align: center;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: white;
+font-family:'Times New Roman', Times, serif;
+order: 2;
+}
+
+#form-cadastro{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 8vh;
+}#form-cadastro h2{
+    margin-bottom: 7vh;
+}
+.campos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+    max-width: 450px;
+    
+}
+.campos label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.inputcadastro{
+    width: 30vw;
+    height: 7vh;
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}.inputcadastro::placeholder{
+    padding-left: 10px;
+}
+#btncadastrar{
+    margin-top: 10vh;
+    width: 30vw;
+    height: 10vh;
+    font-size: 36px;
+    border: 2px solid black;
+    border-radius: 10px;
+    min-width: 10vw;
+    background: linear-gradient(to bottom, #012214,  #0a2b15);
+    color: white;
+}#btncadastrar:hover{
+    font-weight: bold;
+    background: linear-gradient(to bottom, #012214,  #105226);
+}
