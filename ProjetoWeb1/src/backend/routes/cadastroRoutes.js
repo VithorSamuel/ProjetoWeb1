@@ -1,9 +1,18 @@
-const express = require('express');
-const router = express.Router();
+import {cadastro} from '../controller/cadastroController.js'
+const cadastroFunc = {
+    body: {
+        type: 'object',
+        required: ['nome', 'email', 'senha'],
+        properties: {
+            nome: { type: 'string'},
+            email: { type: 'string', format: 'email' }, 
+            senha: { type: 'string', minLength: 5 }
+        }
+    }
+};
 
-const cadastroController = require('../controller/' +
-    'cadastroController');
+async function cadastroRoutes(fastify, options) {
+    fastify.post('/cadastro', { schema: cadastroFunc }, cadastro);
+}
 
-router.post('/cadastro', cadastroController.cadastro);
-
-module.exports = router;
+export default cadastroRoutes   
