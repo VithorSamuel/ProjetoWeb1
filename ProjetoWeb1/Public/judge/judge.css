@@ -1,0 +1,11 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+ background: linear-gradient(to bottom, #012214,  #049635);
+
+}
+

@@ -59,11 +59,14 @@
             const result = await res.json();
 
             if(res.ok){
-                alert(`Sucesso: ${result.usuario.email} cadastrado`);
+                sessionStorage.setItem('nomeUser', `${result.usuario.nome}`)
                 //cadastroController vai mandar um json
                 // com mensagem
                 cadastrar.reset();
+                const cadastrado = sessionStorage.setItem('cadastrado', 'true')
+                
                 window.location.href = '/main';
+                
                 Object.values(input).forEach(e =>{
                     e.style.borderColor = "";
                 });

@@ -7,7 +7,6 @@ import multipart from '@fastify/multipart';
 import cadastroRoutes from './src/backend/routes/cadastroRoutes.js';
 import loginRoutes from './src/backend/routes/loginRoutes.js';
 import virustotalRoutes from './src/backend/routes/virustotalRoutes.js';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -25,14 +24,15 @@ fastify.register(fastifyStatic, {
 fastify.register(fastifyStatic, {
     root: path.join(__dirname, 'views'),
     prefix: '/views/',
-    decorateReply: false // Evita conflito com o primeiro decorateReply
+    decorateReply: false
 });
 
-
+//ativando os plugins das routes
 fastify.register(cadastroRoutes);
 fastify.register(loginRoutes);
 fastify.register(virustotalRoutes);
 
+//umas rotas ae pra entregar os file quando haver get nos endpoints
 fastify.get('/', async (request, reply) => {
     return reply.sendFile('index.html', path.join(__dirname, 'views'));
 });
@@ -52,7 +52,17 @@ fastify.get('/main', async(request, reply) =>{
 fastify.get('/resultado', async(request, reply) =>{
     return reply.sendFile('resultado.html', path.join(__dirname, 'views'))
 })
-// Inicialização do Servidor
+
+fastify.get('/judge', async (request, reply) =>{
+    return reply.sendFile('judge.html', path.join(__dirname, 'views'))
+})
+
+fastify.get('/sobreantivirus', async (request, reply) =>{
+    return reply.sendFile('sobreantivirus.html', path.join(__dirname, 'views'))
+})
+
+
+// Iniciar Server
 const start = async () => {
     try {
         await fastify.listen({ port: process.env.PORT || 3000,

@@ -2,7 +2,7 @@ import { UsuarioInsert } from "../banco/DAOUsuario.js";
 import argon2 from 'argon2'
 //handler
 const cadastro = async (request, reply) =>{
-    const {nome, email, senha} = request.body;
+    const {nome, email, senha} = request.body
     console.log(`Controller = cadastrando ${email}`)
 
     try{
@@ -14,7 +14,8 @@ const cadastro = async (request, reply) =>{
 
         return reply.code(201).send({
             mensagem: "Usuario cadastrado com sucesso",
-            usuario: novoUsuario
+            usuario: novoUsuario,
+            
         })
 
     }catch(err){

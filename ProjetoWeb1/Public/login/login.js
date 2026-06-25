@@ -26,9 +26,10 @@ const input = {
                 body: JSON.stringify(dados)
             })
             const result = await res.json();
-
+            
             if(res.ok){
-                alert(`${result.usuario.nome} entrou`)
+                sessionStorage.setItem('nomeUser', `${result.usuario.nome}`)
+                 const cadastrado = sessionStorage.setItem('cadastrado', 'true')
                 window.location.href = '/main'
                 return;
             }

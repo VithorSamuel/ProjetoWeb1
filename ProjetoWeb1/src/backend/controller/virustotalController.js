@@ -32,7 +32,7 @@ if (!process.env.API_KEY) {
 
     if(res.ok){
         const id = result.data.id
-        const atributos = result.data.attributes;
+        const atributos = result.data.attributes
         if(atributos && atributos.status === 'completed'){
             const listaAVirus = processo(atributos.results)
             return reply.send({ok: true, status: 'concluido', id, antivirus: listaAVirus})

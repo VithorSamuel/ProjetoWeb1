@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #012214,  #049635);
+    background-attachment: fixed;
+    
+}
+
+p{
+    font-size: 32px;
+    text-align: justify;
+}
+
+a:link, a:hover{
+    display: block;
+  color: white !important;
+  text-decoration: none;
+  font-size: 48px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,5 +1,15 @@
 const btnArquivo = document.getElementById('btnArquivo')
 const seletorArquivo = document.getElementById('seletorArquivo')
+const labelnome = document.getElementById('labelnome')
+const nomeUser = sessionStorage.getItem('nomeUser')
+
+document.addEventListener('DOMContentLoaded', async () =>{
+    labelnome.textContent = nomeUser
+    const cadastrado = sessionStorage.getItem('cadastrado')
+    if(cadastrado !== 'true'){
+        window.location.href = '/cadastro'
+    }
+})
 
 btnArquivo.addEventListener('click', () =>{
     seletorArquivo.click()
